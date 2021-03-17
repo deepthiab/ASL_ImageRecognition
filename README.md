@@ -18,7 +18,7 @@ This project aims to recognize the American Sign Language alphabet from an image
 <p>&nbsp;</p>
 
 ## Data
-The initial set of training and validation images were obtained from [Kaggle](chttps://www.kaggle.com/datamunge/sign-language-mnist)
+The initial set of training and validation images were obtained from [Kaggle](https://www.kaggle.com/datamunge/sign-language-mnist)
 There was no significant class imbalance. J and Z alphabets involve movement and are  hence not present in this data set
 
 ![Alt text](images/TrainData_ClassCount.png)
