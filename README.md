@@ -36,6 +36,9 @@ Our final model has a 97.29% accuracy with test data.
 
 ![Alt text](images/Pixels/confusion_matrix.png)
 
+<p>&nbsp;</p>   
+
+[Streamlit script](AlphabetASL.py) loads a page that accepts an image , uses the model above to  identify the alphabet
 
 <p>&nbsp;</p>   
 
@@ -43,9 +46,8 @@ Our final model has a 97.29% accuracy with test data.
 
 Although we are seeing a great testing accuracy. The model is not performing as well on images taken in other conditions.
 
-
-<p>&nbsp;</p>   
-
+<p>&nbsp;</p> 
+ 
 ## Next Steps:
 
 - Data Augemntation :  The current data augemntation has zoom , rotation , height and width shift. Change brightness levels as well in the train data
