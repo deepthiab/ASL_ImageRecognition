@@ -5,8 +5,9 @@
  
 - [Problem Statement](#Problem-Statement)  
 - [Data](#Data)
-- [Data Analysis](#Data-Analysis)
-- [Interesting Observations](#Interesting-Observations)
+- [Model](#Convolusional-Neural-Network-Model)
+- [Challenges](#Challenges)
+- [Next Steps](#Next-Steps)
 
 <p>&nbsp;</p>
 
@@ -23,39 +24,31 @@ There was no significant class imbalance. J and Z alphabets involve movement and
 ![Alt text](images/TrainData_ClassCount.png)
 
 
-Sample of  training data - 28x28 pixels gray scale
+<p>&nbsp;</p>
 
-![Alt text](images/Pixels/C.png)  ![Alt text](images/Pixels/D.png) ![Alt text](images/Pixels/G.png)
+## Convolusional Neural Network Model:
+The CNN model was built using Keras.
+Image augmentation techniques are used to maximise the use of our few training examples to generalize better.
+Batch Normalization and Dropout layers are used to avoid overfitting.
+[Notebook for Data prep and model](DataPrep_CNN.ipynb)
 
+Our final model has a 97.29% accuracy with test data.
 
-
-
-
-## Data Analysis:
-[Notebook for EDA and models](code/EDA_Models.ipynb)
-
-**Data Cleaning**
-- Only the post itself was used as our feature
-- Null, [removed] and [deleted] values were dropped.
-- We had nearly 24K documents  after dropping the invalid text posts.
-
-**Modeling**
-
-Multinomial Naive Bayes with Count vectorizor gave the best accuracy score of **94.4%** on the testing data with low variablity. The other model  tried to fit, TFID with Random forest  was overfit. Hence the model was not used. Below is the confusion matrix for the NB with CV.
-
-![Alt text](image/confusion_matrix.png)
+![Alt text](images/Pixels/confusion_matrix.png)
 
 
-    
-## Interesting Observations:
+<p>&nbsp;</p>   
+
+## Challenges:
+
+Although we are seeing a great testing accuracy. The model is not performing as well on images taken in other conditions.
 
 
-- 'just', 'really', 'like','time' were the most common words across both boards
-- 'know' was one of the top 10 words in Books
-- 'think' was one of the top 10 words in Movies
+<p>&nbsp;</p>   
 
 ## Next Steps:
 
-- Try a pipeline with Count Vectorizor and then NB 
-- Remove words strongly related to movies like 'movie; 'watch' from the book corpus and vice versa.
+- Data Augemntation :  The current data augemntation has zoom , rotation , height and width shift. Change brightness levels as well in the train data
+- Use more images taken in different conditions.
+
 
