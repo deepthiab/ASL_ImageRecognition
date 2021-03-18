@@ -34,7 +34,7 @@ Batch Normalization and Dropout layers are used to avoid overfitting.
 
 Our final model has a 97.29% accuracy with test data.
 
-![Alt text](images/Pixels/confusion_matrix.png)
+![Alt text](images/confusion_matrix.png)
 
 <p>&nbsp;</p>   
 
