@@ -4,16 +4,18 @@ from PIL import Image, ImageFilter
 from utils import image_prep
 import numpy as np
 import string
-from pathlib import Path
+import os
 
-path = Path(__file__).parent.absolute().joinpath('models')
+dirname = os.path.dirname(__file__)
+modelpath = os.path.join(dirname, 'models')
+
 
 st.title("American Sign Language Alphabet")
 
 st.subheader('Image Recognition')
 
 # @st.cache
-model = keras.models.load_model('/Users/dbvaddi/Desktop/DSIR/CapStone/models/')
+model = keras.models.load_model(modelpath)
 
 
 st.write('CNN model')
